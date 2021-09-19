@@ -6,3 +6,14 @@ first_line_match : '^#![ \t]*/.* \bxonsh[\d\.]*\b'
 scope            : source.xonsh
 version          : 1                              # update to 2 when the default Python syntax is update
 extends          : Packages/Python/Python.sublime-syntax
+
+contexts:
+  name-specials    :
+    - meta_prepend : true
+    - include      : builtin-functions-xonsh
+  builtin-functions-xonsh:
+    - match: |-
+        (?x)\b(?:
+          abbrevs|aliases|compilex|execx|evalx|events|print_color|exit|printx
+        )\b
+      scope: support.function.builtin.xonsh
