@@ -1,0 +1,8 @@
+%YAML 1.2
+---
+name             : Xonsh                          # extends the default Sublime Text python package with Xonsh-specific contexts
+file_extensions  : [xsh, xonshrc]
+first_line_match : '^#![ \t]*/.* \bxonsh[\d\.]*\b'
+scope            : source.xonsh
+version          : 1                              # update to 2 when the default Python syntax is update
+extends          : Packages/Python/Python.sublime-syntax
