@@ -3,8 +3,8 @@
 <dict>
 	<key>scope</key>
 	<string>
-		source.python entity.name.class,
-		source.python entity.name.function
+		source.xonsh entity.name.class,
+		source.xonsh entity.name.function
 	</string>
 	<key>settings</key>
 	<dict>
