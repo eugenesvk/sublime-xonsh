@@ -17,3 +17,34 @@ contexts:
           abbrevs|aliases|compilex|execx|evalx|events|print_color|exit|printx
         )\b
       scope: support.function.builtin.xonsh
+
+
+  expressions-common:
+    - meta_append   : true
+    - include       : variable-xonsh
+  variable-xonsh:                                 # capture $varA or ${...} / ${<expr>}, exclude $[ $(
+    - match         :   (?=\$[^(\[])
+      push          :
+        - meta_scope: meta.variable.xonsh
+        - match     : (?=[^$])
+          pop       : true
+        - match     :      \$                     # 0 match a single variable definition symbol to help with completions
+          scope     : variable.other.xonsh punctuation.definition.variable.xonsh
+          push      :
+            - match :      \{
+              scope : punctuation.section.set.begin.python
+              push  : inside-var-env-xonsh
+            - match : (?=[^{{identifier}}])
+              pop   : true
+            - match :     '{{identifier}}'
+              scope : variable.other.xonsh
+              push  : after-expression
+  inside-var-env-xonsh:
+    - meta_scope: meta.set.python variable.other.env.xonsh
+    - match   : \}
+      scope   : punctuation.section.set.end.python
+      set     : after-expression
+    - match   : \.\.\.
+      scope   : variable.other.env.ellipsis.xonsh
+    - include : inline-for
+    - include : expression-in-a-group
