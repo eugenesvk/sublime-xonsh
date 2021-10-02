@@ -53,6 +53,7 @@ contexts:
   line-statements:
     - meta_prepend : true                         # prepend or ‘decorators’ will override ‘@’
     - include      : command-substitution
+    - include      : python-evaluation
   command-substitution:                           # capture @$(<expr>)
     - match     : (?=@\$)                         # strict (?=@\$\() paints the ‘$’ as 'invalid.illegal' without a ‘(’
       push      :
@@ -77,3 +78,22 @@ contexts:
                   scope: punctuation.section.parens.end.xonsh
                   pop  : 2
                 - include: main # the environment inside = the base environment
+  python-evaluation:                              # capture @(<expr>)
+    - match     : (?=@\()
+      push      :
+        - match : (?!@)
+          pop   : true
+        - match :   '@'
+          scope : keyword.operator.subprocess.pyeval.xonsh
+          push  :
+            - meta_scope: meta.interpolation.command.xonsh
+            - match: (?=[^(])
+              pop  : true
+            - match:     \(
+              scope: punctuation.section.parens.begin.xonsh
+              push :
+              - meta_scope: meta.parens.interpolation.command.xonsh
+              - match:   \)
+                scope: punctuation.section.parens.end.xonsh
+                pop  : 2
+              - include: main # the environment inside = the base environment
