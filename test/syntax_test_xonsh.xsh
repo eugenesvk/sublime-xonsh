@@ -129,3 +129,15 @@ $[echo 1]     # 4 $[<expr>] Uncaptured Subprocess
 # <-             meta.interpolation.command.xonsh
 #^^^^^^^^        meta.interpolation.command.xonsh
 # ^^^^^^^        meta.brackets.interpolation.command
+
+# 5 Test xonsh function globbing @foo`bar`
+@find`needle` # Function globbing @foo`bar`
+# <-             punctuation.definition.annotation.xonsh
+#    ^           punctuation.definition.string.begin.xonsh
+#    ^           punctuation.section.arguments.begin.xonsh
+#           ^    punctuation.definition.string.end.xonsh
+#           ^    punctuation.section.arguments.end.xonsh
+#    ^^^^^^^^    string.quoted.backtick.xonsh
+#    ^^^^^^^^    meta.string.xonsh
+#    ^^^^^^^^    meta.function-call.arguments.xonsh
+#^^^^            meta.function-call.xonsh
