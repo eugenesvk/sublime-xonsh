@@ -54,6 +54,7 @@ contexts:
     - meta_prepend : true                         # prepend or ‘decorators’ will override ‘@’
     - include      : command-substitution
     - include      : python-evaluation
+    - include      : function-search
     - include      : subprocess-captured
     - include      : subprocess-uncaptured
   command-substitution:                           # capture @$(<expr>)
@@ -133,3 +134,33 @@ contexts:
                 scope: punctuation.section.brackets.end.xonsh
                 pop  : 3
               - include: main # the environment inside = the base environment
+
+  function-search:                                # capture @foo`bar`
+    - match     : (?=@{{identifier}}`)
+      push      :
+        - match : (?!@)
+          pop   : true
+        - match :   '@'
+          scope : punctuation.definition.annotation.xonsh
+          push  :
+            - match  : (?=[^{{identifier}}`])
+              pop    : true
+            - include: function-call-wrapper-search
+            - include: string-backtick
+  function-call-wrapper-search:
+    - meta_scope: meta.function-call.python
+    - match: (?={{identifier}})
+      push :
+        - meta_scope: meta.function-call.xonsh meta.qualified-name.python3 variable.function.python
+        - include: name-specials
+        - include: generic-names
+        - match  : ''
+          pop    : true
+  string-backtick:
+    - match: "`"
+      scope: punctuation.definition.string.begin.xonsh punctuation.section.arguments.begin.xonsh
+      push :
+        - meta_scope: meta.function-call.arguments.xonsh meta.string.xonsh string.quoted.backtick.xonsh
+        - match: "`"
+          scope: punctuation.definition.string.end.xonsh punctuation.section.arguments.end.xonsh
+          pop  : 1
