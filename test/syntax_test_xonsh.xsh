@@ -75,3 +75,57 @@ ${'USER'}     #   ${<expr>} Environment Lookup
 "not $varA $" # 6 Comment
 #    ^            string.quoted.double
 #     ^^^^        string.quoted.double
+
+# 4 Test xonsh subprocess operators $() $[] ${} @() @$()
+@$(which ls)  # 1 Command Substitution @$(<expr>)
+# <-             keyword.operator.subprocess.pyeval.xonsh
+#^               keyword.operator.subprocess.xonsh
+# ^              punctuation.section.parens.begin.xonsh
+#          ^     punctuation.section.parens.end.xonsh
+# <-             meta.interpolation.command.xonsh
+#^^^^^^^^^^^     meta.interpolation.command.xonsh
+# ^^^^^^^^^^     meta.parens.interpolation.command
+A @ B         #  test that we didn't break matrix multiplication
+# ^              keyword.operator.matrix.python
+@annotation   #  test that we didn't break function annotations
+# <-             punctuation.definition.annotation.python
+# <-             meta.annotation.python
+#^^^^^^^^^^      meta.annotation.python
+@$            #  don't scope ‘$’ as ‘invalid.illegal.character’
+# <-             keyword.operator.subprocess.pyeval.xonsh
+#^               meta.interpolation.command.xonsh
+@('echo', 1)  # 2 Python Evaluation @(<expr>)
+# <-             keyword.operator.subprocess.pyeval.xonsh
+#^               punctuation.section.parens.begin.xonsh
+#          ^     punctuation.section.parens.end.xonsh
+# <-             meta.interpolation.command.xonsh
+#^^^^^^^^^^^     meta.interpolation.command.xonsh
+# ^^^^^^^^^^     meta.parens.interpolation.command
+$(echo 1)     # 3 $(<expr>) Captured Subprocess
+# <-             keyword.operator.subprocess.captured.xonsh
+#^               punctuation.section.parens.begin.xonsh
+#       ^        punctuation.section.parens.end.xonsh
+# <-             meta.interpolation.command.xonsh
+#^^^^^^^^        meta.interpolation.command.xonsh
+# ^^^^^^^        meta.parens.interpolation.command
+!(echo 1)     #   !(<expr>)
+# <-             keyword.operator.subprocess.captured.xonsh
+#^               punctuation.section.parens.begin.xonsh
+#       ^        punctuation.section.parens.end.xonsh
+# <-             meta.interpolation.command.xonsh
+#^^^^^^^^        meta.interpolation.command.xonsh
+# ^^^^^^^        meta.parens.interpolation.command
+$[echo 1]     # 4 $[<expr>] Uncaptured Subprocess
+# <-             keyword.operator.subprocess.uncaptured.xonsh
+#^               punctuation.section.brackets.begin.xonsh
+#       ^        punctuation.section.brackets.end.xonsh
+# <-             meta.interpolation.command.xonsh
+#^^^^^^^^        meta.interpolation.command.xonsh
+# ^^^^^^^        meta.brackets.interpolation.command
+![echo 1]     #   ![<expr>]
+# <-             keyword.operator.subprocess.uncaptured.xonsh
+#^               punctuation.section.brackets.begin.xonsh
+#       ^        punctuation.section.brackets.end.xonsh
+# <-             meta.interpolation.command.xonsh
+#^^^^^^^^        meta.interpolation.command.xonsh
+# ^^^^^^^        meta.brackets.interpolation.command
