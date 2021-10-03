@@ -50,3 +50,6 @@ Thumbs.db
 *.dll
 *.lib
 *.sbr
+
+Changelog.html
+ReadMe.html
