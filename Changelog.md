@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file
 
-[unreleased]: https://github.com/eugenesvk/sublime-xonsh/compare/0.1.0...HEAD
+[unreleased]: https://github.com/eugenesvk/sublime-xonsh/compare/0.1.1...HEAD
 ## [Unreleased]
   <!-- - __Added__ -->
   <!--   + :sparkles:  -->
@@ -15,6 +15,9 @@ All notable changes to this project will be documented in this file
   <!--   + :wastebasket:  -->
   <!-- - __Security__ -->
   <!--   + :lock:  -->
+
+[0.1.1]: https://github.com/eugenesvk/sublime-xonsh/releases/tag/0.1.1
+## [0.1.1]
   - __Fixed__
     + :lady_beetle: whitespace before `@()` `@$()` breaking a match
 
