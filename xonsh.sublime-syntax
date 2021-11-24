@@ -58,7 +58,7 @@ contexts:
     - include      : subprocess-captured
     - include      : subprocess-uncaptured
   command-substitution:                           # capture @$(<expr>)
-    - match     : (?=@\$)                         # strict (?=@\$\() paints the ‘$’ as 'invalid.illegal' without a ‘(’
+    - match     : (?=\s*@\$)                      # strict (?=@\$\() paints the ‘$’ as 'invalid.illegal' without a ‘(’
       push      :
         - match : (?!@)
           pop   : true
@@ -82,7 +82,7 @@ contexts:
                   pop  : 2
                 - include: main # the environment inside = the base environment
   python-evaluation:                              # capture @(<expr>)
-    - match     : (?=@\()
+    - match     : (?=\s*@\()
       push      :
         - match : (?!@)
           pop   : true

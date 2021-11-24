@@ -85,6 +85,13 @@ ${'USER'}     #   ${<expr>} Environment Lookup
 # <-             meta.interpolation.command.xonsh
 #^^^^^^^^^^^     meta.interpolation.command.xonsh
 # ^^^^^^^^^^     meta.parens.interpolation.command
+ @$(which ls) #  same starting with a space
+#^               keyword.operator.subprocess.pyeval.xonsh
+# ^              keyword.operator.subprocess.xonsh
+#  ^             punctuation.section.parens.begin.xonsh
+#           ^    punctuation.section.parens.end.xonsh
+#^^^^^^^^^^^^    meta.interpolation.command.xonsh
+#  ^^^^^^^^^^    meta.parens.interpolation.command
 A @ B         #  test that we didn't break matrix multiplication
 # ^              keyword.operator.matrix.python
 @annotation   #  test that we didn't break function annotations
@@ -101,6 +108,12 @@ A @ B         #  test that we didn't break matrix multiplication
 # <-             meta.interpolation.command.xonsh
 #^^^^^^^^^^^     meta.interpolation.command.xonsh
 # ^^^^^^^^^^     meta.parens.interpolation.command
+ @('echo', 1) # same starting with a space
+#^               keyword.operator.subprocess.pyeval.xonsh
+# ^              punctuation.section.parens.begin.xonsh
+#           ^    punctuation.section.parens.end.xonsh
+#^^^^^^^^^^^^    meta.interpolation.command.xonsh
+#  ^^^^^^^^^^    meta.parens.interpolation.command
 $(echo 1)     # 3 $(<expr>) Captured Subprocess
 # <-             keyword.operator.subprocess.captured.xonsh
 #^               punctuation.section.parens.begin.xonsh
