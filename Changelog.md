@@ -8,13 +8,15 @@ All notable changes to this project will be documented in this file
   <!-- - __Changed__ -->
   <!--   +  -->
   <!-- - __Fixed__ -->
-  <!--   + :beetle:  -->
+  <!--   + :lady_beetle:  -->
   <!-- - __Deprecated__ -->
   <!--   + :poop:  -->
   <!-- - __Removed__ -->
   <!--   + :wastebasket:  -->
   <!-- - __Security__ -->
   <!--   + :lock:  -->
+  - __Fixed__
+    + :lady_beetle: whitespace before `@()` `@$()` breaking a match
 
 [0.1.0]: https://github.com/eugenesvk/sublime-xonsh/releases/tag/0.1.0
 ## [0.1.0]
