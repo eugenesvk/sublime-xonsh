@@ -80,7 +80,7 @@ contexts:
                 - match:   \)
                   scope: punctuation.section.parens.end.xonsh
                   pop  : 2
-                - include: main # the environment inside = the base environment
+                - include: statements # the environment inside = the base environment
   python-evaluation:                              # capture @(<expr>)
     - match     : (?=\s*@\()
       push      :
@@ -99,7 +99,7 @@ contexts:
               - match:   \)
                 scope: punctuation.section.parens.end.xonsh
                 pop  : 2
-              - include: main # the environment inside = the base environment
+              - include: statements # the environment inside = the base environment
   subprocess-captured:                            # capture $(<expr>) !(<expr>)
     - match     : (?=[$!]\()
       push      :
@@ -116,7 +116,7 @@ contexts:
               - match:   \)
                 scope: punctuation.section.parens.end.xonsh
                 pop  : 3
-              - include: main # the environment inside = the base environment
+              - include: statements # the environment inside = the base environment
   subprocess-uncaptured:                          # capture $[<expr>] ![<expr>]
     - match     : (?=[$!]\[)
       push      :
@@ -133,7 +133,7 @@ contexts:
               - match:   \]
                 scope: punctuation.section.brackets.end.xonsh
                 pop  : 3
-              - include: main # the environment inside = the base environment
+              - include: statements # the environment inside = the base environment
 
   function-search:                                # capture @foo`bar`
     - match     : (?=@{{identifier}}`)

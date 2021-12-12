@@ -16,6 +16,9 @@ All notable changes to this project will be documented in this file
   <!-- - __Security__ -->
   <!--   + :lock:  -->
 
+  - __Fixed__
+    + :lady_beetle: closing brackets highlighted as illegal stray braces in ST4 Dev
+
 [0.1.1]: https://github.com/eugenesvk/sublime-xonsh/releases/tag/0.1.1
 ## [0.1.1]
   - __Fixed__
