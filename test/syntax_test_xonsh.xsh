@@ -93,7 +93,7 @@ ${'USER'}     #   ${<expr>} Environment Lookup
 #^^^^^^^^^^^^    meta.interpolation.command.xonsh
 #  ^^^^^^^^^^    meta.parens.interpolation.command
 A @ B         #  test that we didn't break matrix multiplication
-# ^              keyword.operator.matrix.python
+# ^              keyword.operator.arithmetic.python
 @annotation   #  test that we didn't break function annotations
 # <-             punctuation.definition.annotation.python
 # <-             meta.annotation.python
