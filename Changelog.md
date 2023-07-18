@@ -16,6 +16,9 @@ All notable changes to this project will be documented in this file
   <!-- - __Security__ -->
   <!--   + :lock:  -->
 
+  - __Changed__
+    + syntax version to 2 since default syntax was updated in ST 4148
+
 [0.1.2]: https://github.com/eugenesvk/sublime-xonsh/releases/tag/0.1.2
 ## [0.1.2]
   - __Fixed__
