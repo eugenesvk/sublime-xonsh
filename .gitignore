@@ -51,5 +51,11 @@ Thumbs.db
 *.lib
 *.sbr
 
+# project's built/temp docs
 Changelog.html
 ReadMe.html
+messages/*.html
+ToDo.html
+ToDo.md
+# test folder
+\[test\]
