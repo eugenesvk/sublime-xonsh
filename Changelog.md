@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file
 
-[unreleased]: https://github.com/eugenesvk/sublime-xonsh/compare/0.1.2...HEAD
+[unreleased]: https://github.com/eugenesvk/sublime-xonsh/compare/4148_0.2.0...4148-
 ## [Unreleased]
   <!-- - __Added__ -->
   <!--   + :sparkles:  -->
@@ -16,6 +16,8 @@ All notable changes to this project will be documented in this file
   <!-- - __Security__ -->
   <!--   + :lock:  -->
 
+[4148_0.2.0]: https://github.com/eugenesvk/sublime-xonsh/releases/tag/4148_0.2.0
+## [4148_0.2.0]
   - __Changed__
     + syntax version to 2 since default syntax was updated in ST 4148
 
