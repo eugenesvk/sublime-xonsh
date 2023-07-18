@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file
 
-[unreleased]: https://github.com/eugenesvk/sublime-xonsh/compare/0.1.2...HEAD
+[unreleased]: https://github.com/eugenesvk/sublime-xonsh/compare/4075-4147_0.1.2...4075-4147
 ## [Unreleased]
   <!-- - __Added__ -->
   <!--   + :sparkles:  -->
@@ -15,6 +15,11 @@ All notable changes to this project will be documented in this file
   <!--   + :wastebasket:  -->
   <!-- - __Security__ -->
   <!--   + :lock:  -->
+
+[4075-4147_0.1.2]: https://github.com/eugenesvk/sublime-xonsh/releases/tag/4075-4147_0.1.2
+## [4075-4147_0.1.2]
+  - __Changed__
+    + move to a new release tag version system
 
 [0.1.2]: https://github.com/eugenesvk/sublime-xonsh/releases/tag/0.1.2
 ## [0.1.2]
