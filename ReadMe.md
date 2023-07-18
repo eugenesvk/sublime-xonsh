@@ -32,9 +32,9 @@ mv sublime-xonsh xonsh
 
 Open any `xonsh` file (e.g. [syntax_example_screen.xsh](./test/syntax_example_screen.xsh)) and verify that the selected syntax is `Xonsh` and xonsh-specific contexts are properly scoped[^1] and highlighted, maybe like so (depending on your color scheme):
 
-![xonsh syntax screenshot solarized](https://user-images.githubusercontent.com/12956286/135798050-039e21a2-bd67-4397-8047-00306b4d0477.png?raw=true "Custom solarized scheme")
+![xonsh syntax screenshot solarized](./doc/syntax_example_screen_solar.png?raw=true "Custom solarized scheme")
 
-![xonsh syntax screenshot default](https://user-images.githubusercontent.com/12956286/135796149-0c918602-39cc-40d9-8d50-eaed8c6907f6.png?raw=true "Default color scheme")
+![xonsh syntax screenshot default](./doc/syntax_example_screen_def.png?raw=true "Default color scheme")
 
 [^1]: scope naming is supposed to conform to that of the default Python package and [ST's scope naming guidelines](https://www.sublimetext.com/docs/scope_naming.html)
 
