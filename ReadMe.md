@@ -89,7 +89,7 @@ This plugin adds two keybindings for the `xonsh` scope: `"`/`'` that auto-pair d
 
 ## Known issues
 
-- Only works in Sublime Text 4 since build __4075__ (10 July 2020) since it's using `meta_append`/`meta_prepend` APIs
+- Only works in Sublime Text 4 since build __4048__ (2023 March 14th) since it's using `meta_append`/`meta_prepend` APIs
 - Illegal Python names that would be legal in a subprocess mode are nonetheless scoped as illegal since there is no differentiation between Python and subprocess modes:<br>
   e.g. `as` in `echo "$HOME" as well as '$HOME'`<br>
   As a workaround use `"`quotes`"` or dim/remove error highlighting for `source.xonsh invalid.illegal.name`
