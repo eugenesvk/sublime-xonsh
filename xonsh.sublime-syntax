@@ -46,7 +46,7 @@ contexts:
       set     : after-expression
     - match   : \.\.\.
       scope   : variable.other.env.ellipsis.xonsh
-    - include : inline-for
+    - include : for-expressions
     - include : expression-in-a-group
 
 
