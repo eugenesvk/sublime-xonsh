@@ -16,6 +16,9 @@ All notable changes to this project will be documented in this file
   <!-- - __Security__ -->
   <!--   + :lock:  -->
 
+  - __Fixed__
+    + :lady_beetle: rename `inline-for` to match the new syntax `for-expressions`
+
 [4148_0.2.0]: https://github.com/eugenesvk/sublime-xonsh/releases/tag/4148_0.2.0
 ## [4148_0.2.0]
   - __Changed__
