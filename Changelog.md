@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file
 
-[unreleased]: https://github.com/eugenesvk/sublime-xonsh/compare/4148_0.2.0...4148-
+[unreleased]: https://github.com/eugenesvk/sublime-xonsh/compare/0.2.1...4148-
 ## [Unreleased]
   <!-- - __Added__ -->
   <!--   + :sparkles:  -->
@@ -16,6 +16,8 @@ All notable changes to this project will be documented in this file
   <!-- - __Security__ -->
   <!--   + :lock:  -->
 
+[0.2.1]: https://github.com/eugenesvk/sublime-xonsh/releases/tag/0.2.1
+## [0.2.1]
   - __Fixed__
     + :lady_beetle: rename `inline-for` to match the new syntax `for-expressions`
 
